@@ -1,3 +1,8 @@
+#this converts light year to miles and vice versa
+#much yay
+#i guess that's going to be a thing now
+#much yay
+
 def main():
     user_info()
 
