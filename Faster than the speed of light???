@@ -1,0 +1,27 @@
+def main():
+    ask()
+
+def ask():
+    print("Can you travel faster than the speed of light?")
+    print("Type in 'exit' to exit. ", end="")
+    user = input()
+
+    
+    if user[0] == "y" or user[0] == "Y":
+        yes()
+        
+    elif user[0] == "n" or user[0] == "N":
+        no()
+
+    while user == "exit" or user == "EXIT" or user == "Exit":
+        exit()        
+
+def yes():
+    print("NO. YOU CANNOT TRAVEL FASTER THAN THE SPEED OF LIGHT.")
+    ask()
+
+def no():
+    print("CORRECT! You cannot travel faster than the speed of light.")
+    ask()       
+
+main()
