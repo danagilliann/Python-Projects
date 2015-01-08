@@ -1,0 +1,60 @@
+def main():
+    user_info()
+
+def user_info():
+    print("1 - Miles to Light Years")
+    print("2 - Light Years to Miles")
+    print("3 - Conversion Rate")
+    print("4 - Exit", end="")
+    user = int(input(": "))
+    
+    if user == 1:
+        mi = float(input("Enter speed in miles: "))
+        mTOl(mi)
+        
+    elif user == 2:
+        ly = float(input("Enter speed in light years: "))
+        lTOm(ly)
+
+    elif user == 3:
+        conversion()
+
+    while user == 4:
+        exit()
+
+def mTOl(mi):
+    flat = 5878499810000
+    ly = mi/flat
+
+    if ly < 1:
+        print(mi, "miles -", format(ly, ".14f"), "light years")
+    else:
+        print(mi, "miles -", format(ly, ",.2f"), "light years")
+    print()
+    
+    user_info()
+
+def lTOm(ly):
+    flat = 5878499810000
+    mi = ly * flat
+
+    print(ly, "light years -", format(mi, ",.2f"), "miles")   
+    print()
+    
+    user_info()
+
+def conversion():
+    flat = 5878499810000
+    num1 = 1
+    mi = num1/flat
+
+    print("1 light year -", flat, "miles")
+    print("1 mile -", mi, "light year")
+    print()
+    
+    user_info()
+    
+main()
+    
+    
+    
